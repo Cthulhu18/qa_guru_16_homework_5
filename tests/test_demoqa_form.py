@@ -3,7 +3,9 @@ from selene import browser, have, be, command
 
 
 def test_the_form():
-    browser.open('https://demoqa.com/automation-practice-form')
+    browser.open('automation-practice-form')
+    browser.driver.execute_script("$('#fixedban').remove()")  # Хотелось бы узнать подробнее про эти команды
+    browser.driver.execute_script("$('footer').remove()")  # Хотелось бы узнать подробнее про эти команды
     browser.element('#firstName').type('Сергей')
     browser.element('#lastName').type('Махно')
     browser.element('#userEmail').type('test@mail.ru')
