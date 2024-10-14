@@ -10,5 +10,4 @@ def set_browser():
     browser.config.window_width = 1280
     browser.config.window_height = 720
     yield
-    time.sleep(5)
     browser.quit()
